@@ -1,0 +1,15 @@
+syntax = 'proto3';
+
+message AddRequest {
+//    参数类型 参数名字 参数代号;
+    int32 num1=1;
+    int32 num2=2;
+}
+
+message AddResponse {
+    int32 reply=1;
+}
+
+service AddService {
+    rpc AddFunc (AddRequest) returns (AddResponse) {}
+}
